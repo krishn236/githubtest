@@ -1,0 +1,42 @@
+name: staged deplyment
+on:
+ workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        type: environment
+        required: trueworkflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        type: environment
+        required: true
+jobs:
+    build:
+    run-on: ubuntu-latest
+    if: github.event_name == "workfow_dispatch"
+    steps:
+    - run: "build something"
+Test:
+    build:
+    run-on: ubuntu-latest
+    if: github.event_name == "workfow_dispatch"
+    steps:
+    - run: "build something"
+    
+Load-test:
+    build:
+    run-on: ubuntu-latest
+    if: github.event_name == "workfow_dispatch"
+    steps:
+    - run: "build something"
+        echo: "load test something"
+        sleep 15
+Production:
+    build:
+    run-on: ubuntu-latest
+    if: github.event_name == "workfow_dispatch"
+    environment: production
+    steps:
+    - run: "build something"
+    
