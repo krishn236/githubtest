@@ -5,7 +5,7 @@ on:
       environment:
         description: 'Environment to deploy to'
         type: environment
-        required: trueworkflow_dispatch:
+        required: true workflow_dispatch:
     inputs:
       environment:
         description: 'Environment to deploy to'
